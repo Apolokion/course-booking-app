@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/screen_padding"
+    app:cardElevation="@dimen/card_elevation"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/card_padding">
+
+        <!-- Title and Status Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                tools:text="Advanced Training Course" />
+
+            <TextView
+                android:id="@+id/textAvailability"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_spacing"
+                android:paddingHorizontal="@dimen/chip_padding_horizontal"
+                android:paddingVertical="@dimen/chip_padding_vertical"
+                android:background="@drawable/bg_status_chip"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textColor="@color/background"
+                tools:text="Available"
+                tools:backgroundTint="@color/status_confirmed"/>
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_spacing_small"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:maxLines="3"
+            android:ellipsize="end"
+            tools:text="This is a comprehensive course description that might span multiple lines..." />
+
+        <!-- Price und AgeGroup in separate Zeilen -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/content_spacing">
+
+            <TextView
+                android:id="@+id/textPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textStyle="bold"
+                tools:text="€99.99 pro Teilnehmer" />
+
+            <TextView
+                android:id="@+id/textAgeGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:background="@drawable/bg_status_chip"
+                android:paddingHorizontal="@dimen/chip_padding_horizontal"
+                android:paddingVertical="@dimen/chip_padding_vertical"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="Erwachsene" />
+        </LinearLayout>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/content_spacing"
+            android:background="?attr/colorOutline" />
+
+        <!-- Locations Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/guest_available_locations"
+            android:textAppearance="?attr/textAppearanceSubtitle2" />
+
+        <!-- Location Chips -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupLocations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_spacing_small" />
+
+        <!-- Capacity Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/content_spacing">
+
+            <TextView
+                android:id="@+id/textCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="24/30 spots available" />
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/progressCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_extra_small"
+                tools:progress="80" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textDateRanges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_spacing"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:drawablePadding="@dimen/content_spacing_small"
+            app:drawableStartCompat="@drawable/ic_calendar"
+            app:drawableTint="?attr/colorPrimary"
+            android:visibility="gone"
+            tools:text="01.01.2025 - 31.01.2025"
+            android:importantForAccessibility="yes"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

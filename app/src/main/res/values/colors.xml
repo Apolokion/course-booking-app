@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Primärfarben -->
+    <color name="primary">#6750A4</color>
+    <color name="primary_variant">#4F378B</color>
+    <color name="primary_container">#EADDFF</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_primary_container">#21005D</color>
+
+    <!-- Sekundärfarben -->
+    <color name="secondary">#625B71</color>
+    <color name="secondary_variant">#4A4458</color>
+    <color name="secondary_container">#E8DEF8</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="on_secondary_container">#1D192B</color>
+
+    <!-- Hintergrund und Oberfläche -->
+    <color name="background">#FFFBFE</color>
+    <color name="surface">#FFFBFE</color>
+    <color name="on_background">#1C1B1F</color>
+    <color name="on_surface">#1C1B1F</color>
+    <color name="surface_variant">#E7E0EC</color>
+    <color name="on_surface_variant">#49454F</color>
+
+    <!-- Welcome Screen spezifische Farben -->
+    <color name="welcome_screen_background">#FFFBFE</color>
+    <color name="welcome_text_color">#1C1B1F</color>
+    <color name="welcome_button_color">#6750A4</color>
+    <color name="welcome_button_text_color">#FFFFFF</color>
+
+    <!-- Card spezifische Farben -->
+    <color name="card_background">#FFFFFF</color>
+
+    <!-- Fehlerfarben -->
+    <color name="error">#B3261E</color>
+    <color name="on_error">#FFFFFF</color>
+    <color name="error_container">#F9DEDC</color>
+    <color name="on_error_container">#410E0B</color>
+
+    <!-- Status Colors -->
+    <color name="status_draft">#625B71</color>
+    <color name="status_pending">#EF6C00</color>
+    <color name="status_confirmed">#2E7D32</color>
+    <color name="status_paid">#2E7D32</color>
+    <color name="status_canceled">#C62828</color>
+    <color name="status_error">#C62828</color>
+
+    <!-- Kurstypen -->
+    <color name="course_type_public">#388E3C</color>
+    <color name="course_type_private">#1976D2</color>
+
+    <!-- Grün -->
+    <color name="green">#2E7D32</color>
+
+    <!-- Alert Dialog -->
+    <color name="successBackground">#4CAF50</color>
+    <color name="successTextColor">#FFFFFF</color>
+    <color name="successIconTint">#FFFFFF</color>
+
+    <color name="infoBackground">#2196F3</color>
+    <color name="infoTextColor">#FFFFFF</color>
+    <color name="infoIconTint">#FFFFFF</color>
+
+    <color name="warningBackground">#FB8C00</color>
+    <color name="warningTextColor">#000000</color>
+    <color name="warningIconTint">#000000</color>
+
+    <color name="errorBackground">#D32F2F</color>
+    <color name="errorTextColor">#FFFFFF</color>
+    <color name="errorIconTint">#FFFFFF</color>
+
+    <!-- Loading Scrim -->
+    <color name="loading_scrim">#80FFFFFF</color>
+
+    <!-- Filter Button Colors -->
+    <color name="filter_button_background">@color/surface_variant</color>
+    <color name="filter_button_selected">@color/secondary_container</color>
+    <color name="filter_button_ripple">@color/surface_variant</color>
+
+    <!-- Success/Warning/Error Colors -->
+    <color name="success_color">@color/status_confirmed</color>
+    <color name="warning_color">@color/status_pending</color>
+    <color name="error_color">@color/error</color>
+</resources>

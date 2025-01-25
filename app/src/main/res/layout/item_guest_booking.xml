@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Immer sichtbarer Header Bereich -->
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/card_padding"
+            android:background="?attr/selectableItemBackground">
+
+            <!-- Header mit Buchungsnummer und Status -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textBookingId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    tools:text="Booking #42" />
+
+                <TextView
+                    android:id="@+id/textStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/content_spacing"
+                    android:background="@drawable/bg_status_chip"
+                    android:paddingHorizontal="@dimen/chip_padding_horizontal"
+                    android:paddingVertical="@dimen/chip_padding_vertical"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    tools:text="Confirmed"
+                    tools:backgroundTint="@color/status_confirmed" />
+            </LinearLayout>
+
+            <!-- Wichtigste Kursinfos -->
+            <TextView
+                android:id="@+id/textCourseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                tools:text="Advanced Training Course" />
+
+            <TextView
+                android:id="@+id/textDateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:drawablePadding="@dimen/content_spacing_small"
+                app:drawableStartCompat="@drawable/ic_calendar"
+                app:drawableTint="?attr/colorPrimary"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="24.12.2024, 14:00 - 16:00" />
+
+            <!-- Expand/Collapse Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonExpandCollapse"
+                style="@style/Widget.App.Button.ExpandCollapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                tools:text="@string/expand_entries"
+                tools:icon="@drawable/ic_arrow_down" />
+        </LinearLayout>
+
+        <!-- Expandable Content -->
+        <LinearLayout
+            android:id="@+id/expandableContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/card_padding"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <!-- Standort -->
+            <TextView
+                android:id="@+id/textLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/content_spacing_small"
+                app:drawableStartCompat="@drawable/ic_location"
+                app:drawableTint="?attr/colorPrimary"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="Main Location" />
+
+            <!-- Preis Info -->
+            <TextView
+                android:id="@+id/textAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textStyle="bold"
+                tools:text="€ 99.99" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/content_spacing"
+                android:background="?attr/colorOutline" />
+
+            <!-- Teilnehmer Liste -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/participants"
+                android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewParticipants"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_booking_participant" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="@dimen/content_spacing"
+                android:background="?attr/colorOutline" />
+
+            <!-- Rechnungskontakt -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/billing_information"
+                    android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonEditContact"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_edit"
+                    app:icon="@drawable/ic_edit" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textBillingName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:textAppearance="?attr/textAppearanceBody1"
+                tools:text="Max Mustermann" />
+
+            <TextView
+                android:id="@+id/textBillingEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="max@example.com" />
+
+            <TextView
+                android:id="@+id/textBillingPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="+43 123 456789" />
+
+            <TextView
+                android:id="@+id/textBillingAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="Musterstraße 1, 1234 Musterstadt, Österreich" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Screen/Layout Dimensions -->
+    <dimen name="screen_padding">16dp</dimen>
+    <dimen name="screen_padding_small">8dp</dimen>
+    <dimen name="content_spacing">16dp</dimen>
+    <dimen name="content_spacing_small">8dp</dimen>
+    <dimen name="content_spacing_extra_small">2dp</dimen>
+    <dimen name="content_spacing_large">24dp</dimen>
+
+    <!-- Card Dimensions -->
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="card_padding_small">12dp</dimen>
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+
+    <!-- Text Dimensions -->
+    <dimen name="text_size_title">20sp</dimen>
+    <dimen name="text_size_subtitle">16sp</dimen>
+    <dimen name="text_size_body">14sp</dimen>
+    <dimen name="text_size_caption">12sp</dimen>
+    <dimen name="text_margin">8dp</dimen>
+
+    <!-- Dialog Dimensions -->
+    <dimen name="dialog_padding">16dp</dimen>
+    <dimen name="dialog_margin">16dp</dimen>
+    <dimen name="dialog_corner_radius">12dp</dimen>
+    <dimen name="dialog_elevation">8dp</dimen>
+    <dimen name="dialog_content_spacing">8dp</dimen>
+
+    <!-- Button & Icon Dimensions -->
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="button_min_height">36dp</dimen>
+    <dimen name="button_padding_horizontal">16dp</dimen>
+    <dimen name="button_padding_vertical">8dp</dimen>
+    <dimen name="button_icon_padding">8dp</dimen>
+    <dimen name="icon_size_small">16dp</dimen>
+    <dimen name="icon_size_default">24dp</dimen>
+    <dimen name="icon_size_large">48dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="button_height_choice_chip">44dp</dimen>
+
+    <!-- List & RecyclerView Dimensions -->
+    <dimen name="list_item_spacing">8dp</dimen>
+    <dimen name="list_padding">16dp</dimen>
+    <dimen name="list_padding_small">4dp</dimen>
+    <dimen name="list_padding_bottom">88dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+
+    <!-- Input Field Dimensions -->
+    <dimen name="input_field_height">56dp</dimen>
+    <dimen name="input_field_padding">16dp</dimen>
+    <dimen name="input_field_spacing">8dp</dimen>
+
+    <!-- Chip Dimensions -->
+    <dimen name="chip_padding_horizontal">12dp</dimen>
+    <dimen name="chip_padding_vertical">4dp</dimen>
+    <dimen name="chip_icon_size">18dp</dimen>
+    <dimen name="chip_icon_padding">4dp</dimen>
+    <dimen name="chip_group_padding">8dp</dimen>
+
+    <!-- Progress Indicators -->
+    <dimen name="progress_size">48dp</dimen>
+    <dimen name="progress_stroke_width">4dp</dimen>
+
+    <!-- Avatar/Image Dimensions -->
+    <dimen name="avatar_size">48dp</dimen>
+    <dimen name="avatar_size_small">32dp</dimen>
+    <dimen name="avatar_padding">8dp</dimen>
+
+    <!-- Popup Menu Dimensions -->
+    <dimen name="popup_corner_radius">12dp</dimen>
+    <dimen name="popup_elevation">3dp</dimen>
+    <dimen name="popup_stroke_width">1dp</dimen>
+
+    <!-- Input Field Dimensions -->
+    <dimen name="input_field_min_width">280dp</dimen>
+    <dimen name="input_field_max_width">488dp</dimen>
+    <dimen name="card_padding_none">0dp</dimen>
+
+    <!-- Card Item Dimensions -->
+    <dimen name="item_min_width">360dp</dimen>
+
+    <!-- TimeEntries in TimeSlots -->
+    <dimen name="time_entries_min_height">80dp</dimen>
+
+    <!-- Welcome Screen Dimensions -->
+    <dimen name="welcome_image_size">240dp</dimen>
+    <dimen name="welcome_button_max_width">320dp</dimen>
+    <dimen name="content_spacing_extra_large">48dp</dimen>
+    <dimen name="button_max_width">320dp</dimen>
+    <dimen name="progress_width_large">80dp</dimen>
+    <dimen name="success_image_size">150dp</dimen>
+</resources>

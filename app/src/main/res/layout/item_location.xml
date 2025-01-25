@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    app:cardElevation="@dimen/card_elevation"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    android:focusable="true"
+    android:clickable="true"
+    android:importantForAccessibility="yes">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/card_padding">
+
+        <!-- Location Icon -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageLocation"
+            android:layout_width="@dimen/icon_size_large"
+            android:layout_height="@dimen/icon_size_large"
+            android:background="?attr/colorSecondaryContainer"
+            android:padding="@dimen/avatar_padding"
+            app:srcCompat="@drawable/ic_location"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+            app:tint="?attr/colorOnSecondaryContainer"
+            android:contentDescription="@string/content_desc_location_icon"
+            android:importantForAccessibility="yes"/>
+
+        <!-- Location Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_spacing"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textStyle="bold"
+                tools:text="Ninja Warrior Training Center"
+                android:importantForAccessibility="yes"/>
+
+            <TextView
+                android:id="@+id/textAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="Secret Alley 42, Hidden District"
+                android:importantForAccessibility="yes"/>
+
+            <TextView
+                android:id="@+id/textCityInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:textAppearance="?attr/textAppearanceBody2"
+                tools:text="12345 Gotham City, Bat cave"
+                android:importantForAccessibility="yes"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

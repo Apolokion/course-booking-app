@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primäre Farben -->
+    <color name="primary">#D0BCFF</color>
+    <color name="primary_variant">#9A82DB</color>
+    <color name="on_primary">#381E72</color>
+    <color name="primary_container">#4F378B</color>
+    <color name="on_primary_container">#EADDFF</color>
+
+    <!-- Sekundäre Farben -->
+    <color name="secondary">#CCC2DC</color>
+    <color name="secondary_variant">#9A82DB</color>
+    <color name="on_secondary">#332D41</color>
+    <color name="secondary_container">#4A4458</color>
+    <color name="on_secondary_container">#E8DEF8</color>
+
+    <!-- Hintergrund und Oberfläche -->
+    <color name="background">#1C1B1F</color>
+    <color name="on_background">#E6E1E5</color>
+    <color name="surface">#1C1B1F</color>
+    <color name="on_surface">#E6E1E5</color>
+    <color name="surface_variant">#49454F</color>
+    <color name="on_surface_variant">#CAC4D0</color>
+
+    <!-- Fehlerfarben -->
+    <color name="error">#F2B8B5</color>
+    <color name="on_error">#601410</color>
+
+    <!-- Grün -->
+    <color name="green">#00C853</color>
+
+    <!-- Rechnungsstatus -->
+    <color name="status_draft">#757575</color>
+    <color name="status_pending">#FFA000</color>
+    <color name="status_confirmed">#43A047</color>
+    <color name="status_paid">#43A047</color>
+    <color name="status_canceled">#D32F2F</color>
+    <color name="status_error">#D32F2F</color>
+
+    <!-- Kurstypen -->
+    <color name="course_type_public">#4CAF50</color>
+    <color name="course_type_private">#2196F3</color>
+
+    <!-- -->
+    <color name="success_color">@color/status_confirmed</color>
+    <color name="warning_color">@color/status_pending</color>
+    <color name="error_color">@color/error</color>
+
+    <!-- Alert Dialog -->
+    <color name="successBackground">#388E3C</color>
+    <color name="successTextColor">#FFFFFF</color>
+    <color name="successIconTint">#FFFFFF</color>
+
+    <!-- Info -->
+    <color name="infoBackground">#1565C0</color>
+    <color name="infoTextColor">#FFFFFF</color>
+    <color name="infoIconTint">#FFFFFF</color>
+
+    <!-- Warnung -->
+    <color name="warningBackground">#FFB300</color>
+    <color name="warningTextColor">#000000</color>
+    <color name="warningIconTint">#000000</color>
+
+    <!-- Fehler -->
+    <color name="errorBackground">#D32F2F</color>
+    <color name="errorTextColor">#FFFFFF</color>
+    <color name="errorIconTint">#FFFFFF</color>
+
+    <!-- Container abdunkeln, wenn gerade geladen wird -->
+    <color name="loading_scrim">#80000000</color>
+
+    <!-- Filter Button Colors -->
+    <color name="filter_button_background">@color/surface_variant</color>
+    <color name="filter_button_selected">@color/secondary_container</color>
+    <color name="filter_button_ripple">@color/surface_variant</color>
+
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/GuestWelcomeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/screen_padding">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Linke Seite - Bild -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:maxWidth="488dp">
+
+            <ImageView
+                android:id="@+id/welcome_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="320dp"
+                android:contentDescription="@string/welcome_image_description"
+                android:src="@drawable/image_welcome" />
+
+        </LinearLayout>
+
+        <!-- Rechte Seite - Text und Buttons -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/content_spacing_large"
+            android:maxWidth="@dimen/button_max_width">
+
+            <TextView
+                android:id="@+id/welcome_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/welcome_text"
+                android:textAlignment="center"
+                android:textAppearance="?attr/textAppearanceHeadlineMedium"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnBackground" />
+
+            <!-- Button Container -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/content_spacing_large">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/welcome_guest_button"
+                    style="@style/Widget.App.Button.Welcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginBottom="@dimen/content_spacing"
+                    android:maxWidth="@dimen/button_max_width"
+                    android:text="@string/continue_as_guest"
+                    android:elevation="@dimen/card_elevation" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/welcome_login_button"
+                    style="@style/Widget.App.Button.Welcome.Secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:maxWidth="@dimen/button_max_width"
+                    android:text="@string/button_login"
+                    android:elevation="@dimen/card_elevation" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

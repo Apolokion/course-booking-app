@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_confirm"
+        android:icon="@drawable/ic_check"
+        android:title="@string/action_confirm_booking"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/action_cancel"
+        android:icon="@drawable/ic_cancel"
+        android:title="@string/action_cancel_booking"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/action_delete"
+        android:icon="@drawable/ic_delete"
+        android:title="@string/action_delete" />
+</menu>

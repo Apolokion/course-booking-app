@@ -1,0 +1,96 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CourseBookingApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/on_background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+
+        <!-- Statusleiste und Navigation -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <item name="fontFamily">@font/roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
+
+        <item name="actionBarSize">56dp</item>
+    </style>
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="itemIconTint">@color/bottom_nav_item_color</item>
+        <item name="itemTextColor">@color/bottom_nav_item_color</item>
+        <item name="itemActiveIndicatorStyle">@style/App.ActiveIndicator</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="elevationOverlayEnabled">true</item>
+    </style>
+
+    <style name="App.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">?attr/colorSecondaryContainer</item>
+    </style>
+
+    <!-- Filter Button Styles -->
+    <style name="Widget.App.Button.Filter" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">8dp</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="backgroundTint">@color/filter_button_background</item>
+        <item name="rippleColor">@color/filter_button_ripple</item>
+    </style>
+
+    <!-- Selected Filter Button Style -->
+    <style name="Widget.App.Button.Filter.Selected" parent="Widget.App.Button.Filter">
+        <item name="backgroundTint">?attr/colorSecondaryContainer</item>
+        <item name="android:textColor">?attr/colorOnSecondaryContainer</item>
+        <item name="iconTint">?attr/colorOnSecondaryContainer</item>
+    </style>
+
+    <style name="Widget.App.Button.Welcome" parent="Widget.Material3.Button">
+        <!-- Basis-Attribute -->
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textAllCaps">false</item>
+
+        <!-- Farben und Elevation -->
+        <item name="backgroundTint">?attr/colorPrimary</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="elevation">4dp</item>
+        <item name="rippleColor">@color/primary_variant</item>
+
+        <!-- Form und Padding -->
+        <item name="cornerRadius">@dimen/card_corner_radius</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+    </style>
+
+    <!-- Sekundärer Style für den Login Button -->
+    <style name="Widget.App.Button.Welcome.Secondary" parent="Widget.App.Button.Welcome">
+        <item name="backgroundTint">?attr/colorSecondary</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="rippleColor">@color/secondary_variant</item>
+    </style>
+
+</resources>

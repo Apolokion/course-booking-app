@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:importantForAccessibility="yes"
+    android:orientation="horizontal"
+    android:padding="@dimen/list_padding_small">
+
+    <!-- Zeit Icon -->
+    <ImageView
+        android:id="@+id/icon_time"
+        android:layout_width="@dimen/icon_size_small"
+        android:layout_height="@dimen/icon_size_small"
+        android:layout_marginEnd="@dimen/content_spacing_small"
+        android:contentDescription="@string/content_desc_time_icon"
+        android:importantForAccessibility="yes"
+        android:src="@drawable/ic_time"
+        app:tint="?attr/colorPrimary" />
+
+    <!-- Zeitbereich -->
+    <TextView
+        android:id="@+id/textTimeRange"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="@string/time_range_format_accessibility"
+        android:importantForAccessibility="yes"
+        android:textAppearance="?attr/textAppearanceBody2"
+        tools:text="14:00 - 16:00" />
+
+    <!-- Datum -->
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_spacing_small"
+        android:contentDescription="@string/date_format_accessibility"
+        android:importantForAccessibility="yes"
+        android:textAppearance="?attr/textAppearanceCaption"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        tools:text="24.12.2024" />
+
+    <!-- Capacity -->
+    <TextView
+        android:id="@+id/textCapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/content_spacing_small"
+        android:contentDescription="@string/course_participants_desc"
+        android:importantForAccessibility="yes"
+        android:textAppearance="?attr/textAppearanceCaption"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        tools:text="10/20 Teilnehmer" />
+
+</LinearLayout>

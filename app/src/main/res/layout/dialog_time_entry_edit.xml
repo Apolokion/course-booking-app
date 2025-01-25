@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dialog_padding">
+
+        <!-- Center Container für maxWidth -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Datum mit Validierungsbereich -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:minWidth="@dimen/input_field_min_width"
+                android:maxWidth="@dimen/input_field_max_width">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputDate"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_field_height"
+                    android:hint="@string/date"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_calendar">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:padding="@dimen/input_field_padding"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Info Text für Datums-Range -->
+                <TextView
+                    android:id="@+id/textDateRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:layout_marginStart="@dimen/text_margin"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textColor="?attr/colorOnSurfaceVariant"
+                    android:importantForAccessibility="yes"/>
+
+            </LinearLayout>
+
+            <!-- Zeit Container -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/content_spacing_large"
+                android:minWidth="@dimen/input_field_min_width"
+                android:maxWidth="@dimen/input_field_max_width">
+
+                <!-- Start Zeit -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputStartTime"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_field_height"
+                    android:hint="@string/start_time"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_time">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextStartTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:padding="@dimen/input_field_padding"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- End Zeit -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputEndTime"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_field_height"
+                    android:layout_marginTop="@dimen/input_field_spacing"
+                    android:hint="@string/end_time"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_time">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextEndTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:padding="@dimen/input_field_padding"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- Standard Zeiten Info -->
+            <TextView
+                android:id="@+id/textDefaultTimes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_large"
+                android:maxWidth="@dimen/input_field_max_width"
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                android:importantForAccessibility="yes"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

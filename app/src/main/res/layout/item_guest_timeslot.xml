@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/screen_padding"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <!-- Kurs- und Standortinformationen -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Kursinfo -->
+            <TextView
+                android:id="@+id/textCourseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textStyle="bold"
+                tools:text="Kurs Title" />
+
+            <!-- Standort (mit Compound Drawable) -->
+            <TextView
+                android:id="@+id/textLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:drawablePadding="@dimen/content_spacing_small"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/button_min_height"
+                android:textAppearance="?attr/textAppearanceBody2"
+                app:drawableStartCompat="@drawable/ic_location"
+                app:drawableTint="?attr/colorPrimary"
+                tools:text="SmashPro HQ" />
+
+        </LinearLayout>
+
+        <!-- Datum und Kapazität -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_spacing"
+            android:orientation="vertical">
+
+            <!-- Datum (mit Compound Drawable) -->
+            <TextView
+                android:id="@+id/textDateRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/content_spacing_small"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/button_min_height"
+                android:textAppearance="?attr/textAppearanceBody1"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_calendar"
+                app:drawableTint="?attr/colorPrimary"
+                tools:text="01.01.2024 - 31.03.2024" />
+
+            <!-- Kapazität (mit LinearLayout wegen ProgressIndicator) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/button_min_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textCapacity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/content_spacing_small"
+                    android:gravity="center_vertical"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    app:drawableStartCompat="@drawable/ic_person"
+                    app:drawableTint="?attr/colorPrimary"
+                    tools:text="12/15 Teilnehmer" />
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/progressCapacity"
+                    android:layout_width="@dimen/progress_width_large"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/content_spacing"
+                    tools:progress="80" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Buchen Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonBook"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/content_spacing"
+            android:height="@dimen/button_height"
+            android:contentDescription="@string/book_course"
+            android:maxWidth="@dimen/button_max_width"
+            android:minHeight="@dimen/button_min_height"
+            android:text="@string/book_course_preview"
+            app:icon="@drawable/ic_calendar" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="@dimen/content_spacing"
+            android:background="?attr/colorOutline" />
+
+        <!-- Time Entries List -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/available_time_entries"
+            android:textAppearance="?attr/textAppearanceSubtitle2" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTimeEntries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_spacing_small"
+            android:nestedScrollingEnabled="false"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_guest_time_entry" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonExpandCollapse"
+            style="@style/Widget.App.Button.ExpandCollapse"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/content_spacing_small"
+            android:contentDescription="@string/expand_entries"
+            android:minHeight="@dimen/button_min_height"
+            android:visibility="gone"
+            tools:icon="@drawable/ic_arrow_down"
+            tools:text="@string/expand_entries"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

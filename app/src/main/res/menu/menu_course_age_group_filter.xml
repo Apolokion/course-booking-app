@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/filter_age_group_all"
+        android:title="@string/filter_age_group_all"/>
+    <item
+        android:id="@+id/filter_age_group_mixed"
+        android:title="@string/filter_age_group_mixed"/>
+    <item
+        android:id="@+id/filter_age_group_children"
+        android:title="@string/filter_age_group_children"/>
+    <item
+        android:id="@+id/filter_age_group_adults"
+        android:title="@string/filter_age_group_adults"/>
+</menu>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Alerter Dialog Title Style -->
+    <style name="AlerterTitleStyle" parent="@android:style/TextAppearance.Material.Title">
+        <!-- Schriftgröße, Farbe, Font etc. -->
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <!-- Optional: <item name="android:fontFamily">@font/my_custom_font</item> -->
+    </style>
+
+    <!-- Alerter Dialog Text Style -->
+    <style name="AlerterTextStyle" parent="@android:style/TextAppearance.Material.Body1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <!-- Optional: <item name="android:fontFamily">@font/my_custom_font</item> -->
+    </style>
+
+    <!-- Button für manage locations -->
+    <style name="Widget.App.Button.Manage" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">8dp</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="backgroundTint">@color/surface_variant</item>
+        <item name="rippleColor">@color/filter_button_ripple</item>
+    </style>
+
+
+    <!-- Expand/Collapse Button Style -->
+    <style name="Widget.App.Button.ExpandCollapse" parent="Widget.Material3.Button.TextButton">
+        <item name="android:minHeight">32dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="iconSize">16dp</item>
+        <item name="iconPadding">4dp</item>
+        <item name="iconGravity">end</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="iconTint">?attr/colorPrimary</item>
+        <item name="rippleColor">@color/filter_button_ripple</item>
+    </style>
+
+</resources>

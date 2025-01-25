@@ -1,0 +1,591 @@
+<resources>
+    <string name="app_name">Course Booking App</string>
+
+    <!-- Language Selector -->
+    <string name="menu_select_language">Select Language</string>
+    <string name="language_german">German</string>
+    <string name="language_english">English</string>
+    <string name="error_language_switch">Error changing language</string>
+
+    <!-- Dark- Lightmode Switch -->
+    <string name="menu_theme_mode">Dark- / Lightmode</string>
+    <string name="theme_mode_light">Light Mode</string>
+    <string name="theme_mode_dark">Dark Mode</string>
+
+    <!-- Bottom Nav -->
+    <string name="menu_course_booking">Book Course</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_admin">Admin</string>
+
+    <!-- API Error Messages -->
+    <string name="error_network_unavailable">No network connection available</string>
+    <string name="error_unauthorized">Unauthorized: Invalid credentials</string>
+    <string name="error_forbidden">Forbidden: You don\'t have permission</string>
+    <string name="error_not_found">Not Found: The requested resource was not found</string>
+    <string name="error_validation">Validation error occurred</string>
+    <string name="error_server">Server error occurred</string>
+    <string name="error_unknown">An unexpected error occurred (%1$d)</string>
+    <string name="error_timeout">Request timed out</string>
+    <string name="error_connection">Connection error occurred</string>
+    <string name="error_timeslot_has_bookings">This timeslot has existing bookings and cannot be updated</string>
+    <string name="error_timeslot_capacity">This timeslot has bookings and the maximum capacity can only be increased</string>
+    <string name="error_invalid_status">The selected status is invalid</string>
+    <string name="error_archived_course">Archived courses cannot be updated</string>
+    <string name="error_method_not_supported">This operation is not supported</string>
+    <string name="error_phone_length">The phone number must be at least 8 characters long</string>
+    <string name="error_invalid_skill_level">The selected skill level is invalid</string>
+
+    <!-- Login -->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login">Login</string>
+    <string name="error_email_required">Email is required</string>
+    <string name="error_password_required">Password is required (min 8 chars)</string>
+    <string name="error_login_failed">Login failed</string>
+    <string name="menu_login">Login</string>
+    <string name="error_invalid_credentials">Invalid login credentials</string>
+    <string name="error_network">Network error occured</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- User edit -->
+    <string name="create_user">Create User</string>
+    <string name="edit_user">Edit User</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Rollen Strings -->
+    <string name="role_admin">Admin</string>
+    <string name="role_trainer">Trainer</string>
+    <string name="role_guest">Guest</string>
+
+    <string name="tab_users">Users</string>
+    <string name="tab_locations">Locations</string>
+    <string name="tab_bookings">Bookings</string>
+    <string name="tab_invoices">Invoices</string>
+
+    <!-- Admin Dashboard Actions -->
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="dialog_delete_user_title">Delete User</string>
+    <string name="dialog_delete_user_message">Are you sure you want to delete user %1$s?</string>
+    <string name="dialog_delete_location_title">Delete Location</string>
+    <string name="dialog_delete_location_message">Are you sure you want to delete location %1$s?</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="menu_user_options">User Options</string>
+    <string name="menu_location_options">Location Options</string>
+    <string name="empty_users_message">No users found</string>
+    <string name="empty_locations_message">No locations found</string>
+
+    <!-- Logout -->
+    <string name="menu_logout">Logout</string>
+    <string name="dialog_logout_title">Logout</string>
+    <string name="dialog_logout_message">Do you really want to log out?</string>
+    <string name="button_logout">Logout</string>
+
+    <!-- Validierung der Input Dialog Felder -->
+    <string name="error_firstname_required">First name is required</string>
+    <string name="error_lastname_required">Last name is required</string>
+    <string name="error_email_invalid_format">Invalid email format</string>
+    <string name="error_email_invalid">Please enter a valid email</string>
+    <string name="error_email_invalid_domain">Invalid email domain</string>
+    <string name="error_role_required">Role is required</string>
+    <string name="error_location_name_required">Location name is required</string>
+
+    <!-- Location -->
+    <string name="create_location">Create Location</string>
+    <string name="edit_location">Edit Location</string>
+
+    <!-- Success messages -->
+    <string name="course_created_success">Course created successfully</string>
+    <string name="course_updated_success">Course updated successfully</string>
+    <string name="course_deleted_success">Course deleted successfully</string>
+    <string name="course_published_success">Course published successfully</string>
+    <string name="course_unpublished_success">Course unpublished successfully</string>
+    <string name="course_archived_success">Course archived successfully</string>
+    <string name="booking_status_updated_success">Booking status updated successfully</string>
+    <string name="booking_details_retrieved">Booking details retrieved</string>
+
+    <string name="user_created_success">User created successfully</string>
+    <string name="user_updated_success">User updated successfully</string>
+    <string name="user_deleted_success">User deleted successfully</string>
+
+    <string name="location_created_success">Location created successfully</string>
+    <string name="location_updated_success">Location updated successfully</string>
+    <string name="location_deleted_success">Location deleted successfully</string>
+    <string name="error_password_too_short">Password must be at least 8 characters</string>
+
+    <!-- Bookings -->
+    <string name="booking_status_pending">Pending</string>
+    <string name="booking_status_confirmed">Confirmed</string>
+    <string name="booking_status_canceled">Canceled</string>
+
+    <!-- Invoices -->
+    <string name="invoice_status_draft">Draft</string>
+    <string name="invoice_status_pending">Pending</string>
+    <string name="invoice_status_paid">Paid</string>
+    <string name="invoice_status_cancelled">Cancelled</string>
+    <string name="invoice_status_error">Error</string>
+
+    <string name="button_download">Download</string>
+    <string name="button_extend">Extend</string>
+    <string name="empty_bookings_message">No bookings found</string>
+    <string name="empty_invoices_message">No invoices found</string>
+
+    <!-- Invoice -->
+    <string name="invoice_token_expired">Download token has expired</string>
+    <string name="invoice_download_started">Invoice download started</string>
+    <string name="invoice_token_extended">Download token extended successfully</string>
+    <string name="invoice_cancelled_success">Invoice cancelled successfully</string>
+    <string name="booking_deleted_success">Booking deleted successfully</string>
+    <string name="invoice_amount">€ %1$.2f</string>
+    <string name="invoice_number">#%1$s</string>
+    <string name="invoice_expires">Expires: %1$s</string>
+
+    <!-- Booking  -->
+    <string name="dialog_delete_booking_title">Delete Booking</string>
+    <string name="dialog_delete_booking_message">Are you sure you want to delete booking %1$s?</string>
+    <string name="dialog_update_booking_status_title">Update Booking Status</string>
+    <string name="action_confirm_booking">Confirm Booking</string>
+    <string name="action_cancel_booking">Cancel Booking</string>
+    <string name="booking_status_updated">Booking status updated successfully</string>
+
+    <!-- Status  -->
+    <string name="status_pending">Pending</string>
+    <string name="status_confirmed">Confirmed</string>
+    <string name="status_canceled">Canceled</string>
+    <string name="status_paid">Paid</string>
+    <string name="status_draft">Draft</string>
+    <string name="status_error">Error</string>
+
+    <!-- Invoice  -->
+    <string name="dialog_cancel_invoice_title">Cancel Invoice</string>
+    <string name="dialog_cancel_invoice_message">Are you sure you want to cancel invoice %1$s?</string>
+    <string name="dialog_extend_token_title">Select New Expiry Date</string>
+    <string name="action_download_invoice">Download Invoice</string>
+    <string name="action_extend_token">Extend Token</string>
+    <string name="action_cancel_invoice">Cancel Invoice</string>
+    <string name="button_cancel_invoice">Cancel Invoice</string>
+
+    <string name="storage_permission_required">Storage permission required for downloading invoices</string>
+    <string name="invoice_download_starting">Starting invoice download...</string>
+    <string name="invoice_download_failed">Failed to download invoice</string>
+    <string name="error_not_supported">Feature actually not supported by the API</string>
+
+    <string name="notification_permission_title">Permission needed</string>
+    <string name="notification_permission_message">We need notification permission to inform you about the status of your downloads.</string>
+    <string name="ok">OK</string>
+
+    <!-- Course Types -->
+    <string name="course_type_private">Private</string>
+    <string name="course_type_public">Public</string>
+
+    <!-- Course Status -->
+    <string name="course_status_draft">Draft</string>
+    <string name="course_status_published">Published</string>
+    <string name="course_status_archived">Archived</string>
+
+    <!-- Age Groups -->
+    <string name="age_group_mixed">Mixed</string>
+    <string name="age_group_children_and_teens">Children &amp; Teens</string>
+    <string name="age_group_adults">Adults</string>
+
+    <!-- Course Management -->
+    <string name="create_course">Create Course</string>
+    <string name="edit_course">Edit Course</string>
+    <string name="course_filter_type">Type</string>
+    <string name="course_filter_status">Status</string>
+    <string name="course_filter_age_group">Age Group</string>
+    <string name="empty_courses_message">No courses found</string>
+    <string name="price_per_participant">€ %.2f per participant</string>
+
+    <!-- Validations -->
+    <string name="error_title_required">Title is required</string>
+    <string name="error_price_required">Price is required</string>
+    <string name="error_type_required">Type is required</string>
+
+    <!-- Course Validation -->
+    <string name="error_price_invalid">Please enter a valid price</string>
+    <string name="error_price_must_be_positive">Price must be greater than 0</string>
+
+    <!-- Course Dialog -->
+    <string name="hint_course_title">Course title</string>
+    <string name="hint_course_description">Course description</string>
+    <string name="hint_course_price">Price per participant</string>
+    <string name="hint_course_type">Course type</string>
+    <string name="hint_course_age_group">Age group</string>
+
+    <string name="filter_clear">Clear Filters</string>
+
+    <!-- Course Actions -->
+    <string name="action_publish_course">Publish Course</string>
+    <string name="action_unpublish_course">Unpublish Course</string>
+    <string name="action_archive_course">Archive Course</string>
+    <string name="dialog_delete_course_title">Delete Course</string>
+    <string name="dialog_delete_course_message">Are you sure you want to delete the course \"%1$s\"?</string>
+
+    <!-- Course Filters -->
+    <string name="filter_type_all">All Types</string>
+    <string name="filter_type_public">Public Courses</string>
+    <string name="filter_type_private">Private Courses</string>
+
+    <string name="filter_status_all">All Statuses</string>
+    <string name="filter_status_draft">Draft</string>
+    <string name="filter_status_published">Published</string>
+    <string name="filter_status_archived">Archived</string>
+
+    <string name="filter_age_group_all">All Age Groups</string>
+    <string name="filter_age_group_mixed">Mixed</string>
+    <string name="filter_age_group_children">Children &amp; Teens</string>
+    <string name="filter_age_group_adults">Adults</string>
+    <string name="error_download_failed">An Error occured while downloading the file</string>
+    <string name="success_downlad_invoice">Invoice successfully downloaded</string>
+
+    <string name="tab_timeslots">Timeslots</string>
+    <string name="tab_courses">Courses</string>
+
+    <!-- Trainer Dashboard -->
+    <string name="hint_select_course">Select course</string>
+    <string name="hint_select_location">Select location</string>
+    <string name="error_select_course_and_location">Please select a course and a location</string>
+    <string name="time_range_format">%1$s - %2$s</string>
+    <string name="capacity_format">%1$d / %2$d participants</string>
+    <string name="timeslot_created_success">Timeslot created successfully</string>
+    <string name="timeslot_updated_success">Timeslot updated successfully</string>
+    <string name="timeslot_deleted_success">Timeslot deleted successfully</string>
+    <string name="dialog_delete_timeslot_title">Delete Timeslot</string>
+    <string name="dialog_delete_timeslot_message">Are you sure you want to delete this timeslot?</string>
+    <string name="empty_timeslots_message">No timeslots found</string>
+
+    <!-- Timeslot Management -->
+    <string name="create_timeslot">Create Timeslot</string>
+    <string name="edit_timeslot">Edit Timeslot</string>
+
+    <!-- Time Ranges -->
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="max_capacity">Maximum Capacity</string>
+    <string name="error_start_date_required">Start date is required</string>
+    <string name="error_end_date_required">End date is required</string>
+    <string name="error_start_time_required">Start time is required</string>
+    <string name="error_end_time_required">End time is required</string>
+    <string name="error_capacity_required">Valid capacity is required</string>
+    <string name="select_start_date">Select start date</string>
+    <string name="select_end_date">Select end date</string>
+    <string name="select_start_time">Select start time</string>
+    <string name="select_end_time">Select end time</string>
+
+    <string name="error_invalid_time_format">Invalid time format</string>
+    <string name="error_date_time_format">Format error</string>
+
+    <!-- Welcome Screen -->
+    <string name="welcome_text">Welcome to the Course Booking App!</string>
+    <string name="continue_as_guest">Continue as Guest</string>
+
+    <!-- Main Screen -->
+    <string name="main_screen">Main Screen</string>
+    <string name="menu_main_fragment">Courses</string>
+
+    <!-- Alert Dialog -->
+    <string name="alertdialog_info">Information</string>
+    <string name="alertdialog_error">Error</string>
+    <string name="alertdialog_success">Success</string>
+    <string name="alertdialog_warning">Warning</string>
+    <string name="default_empty_message">No message provided</string>
+
+    <!-- Error messages for navigation -->
+    <string name="error_navigation_failed">Navigation failed: %1$s</string>
+    <!-- Warning messages for unknown roles -->
+    <string name="warning_unknown_role">Unknown role: %1$s</string>
+    <string name="action_download_invoice_error">File could not be downloaded</string>
+    <string name="error_no_manage_storage_permission">Cannot download invoice because \"All files access\" is not granted.</string>
+    <string name="alertdialog_please_activate_file_access">Bitte aktivieren Sie \'Alle Dateien verwalten\', damit die App ins öffentliche Download-Verzeichnis schreiben kann.</string>
+
+    <string name="storage_permission_dialog_title">Storage Permission Required</string>
+    <string name="storage_permission_dialog_message">This app needs storage access to download invoices. Please grant access in the next screen.</string>
+    <string name="storage_permission_denied">Storage permission was denied. Unable to download invoice.</string>
+    <string name="error_creating_download_directory">Failed to create download directory</string>
+    <string name="error_download_directory_access">Cannot access download directory</string>
+    <string name="error_preparing_storage">Failed to prepare storage for download</string>
+
+    <string name="filter_role">Role</string>
+    <string name="filter_role_all">All</string>
+    <string name="filter_status">"Filter Status: "</string>
+    <string name="invoice_status_confirmed">confirmed</string>
+    <string name="invoice_status_cancelled_with_reversal">Canceled (+ Rev)</string>
+    <string name="invoice_status_reversal">Reversal</string>
+
+    <!-- Booking Strings -->
+    <string name="booking_id">Booking #%1$s</string>
+    <string name="booking_amount">Amount: €%1$.2f</string>
+    <string name="booking_course">Course: %1$s</string>
+    <string name="booking_comment">Comment: %1$s</string>
+    <string name="booking_date">Date: %1$s</string>
+
+    <!-- Invoice PDF View -->
+    <string name="error_loading_invoice">Error loading invoice</string>
+    <string name="error_displaying_invoice">Error displaying invoice</string>
+    <string name="invoice_viewer_title">Invoice</string>
+    <string name="action_view_invoice">Show Invoice</string>
+    <string name="error_parsing">Error parsing server response</string>
+
+    <!-- API Error Messages -->
+    <string name="error_list_header">List of encountered errors:</string>
+    <string name="error_email_taken">This email address is already in use</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_invalid_format">Invalid format</string>
+    <string name="error_forbidden_action">This action is not allowed</string>
+    <string name="error_loading_locations">Error loading locations</string>
+    <string name="error_syncing_locations">Error syncing locations</string>
+
+
+    <string name="select_locations">Select locations</string>
+    <string name="assigned_locations">Assigned locations</string>
+    <string name="add_location">Manage Locations</string>
+    <string name="close">Close</string>
+    <string name="error_adding_location">Error adding location</string>
+    <string name="error_removing_location">Error removing location</string>
+    <string name="manage_locations_with_count">Manage locations [%1$d/%2$d]</string>
+    <string name="manage_locations">Manage locations</string>
+    <string name="save_course_contact_admin">Save your course and contact your Administrator. Only Administrators can add locations.</string>
+
+    <string name="unknown_course">Unknown Course</string>
+    <string name="unknown_location">Unknown Location</string>
+
+    <!-- Time Entry Management -->
+    <string name="manage_time_entries">Manage Times [%1$d]</string>
+    <string name="empty_time_entries_message">No time entries found</string>
+    <string name="create_time_entry">Create Time Entry</string>
+    <string name="edit_time_entry">Edit Time Entry</string>
+    <string name="dialog_delete_time_entry_title">Delete Time Entry</string>
+    <string name="dialog_delete_time_entry_message">Are you sure you want to delete this time entry?</string>
+    <string name="date">Date</string>
+    <string name="select_date">Select date</string>
+    <string name="error_date_required">Date is required</string>
+    <string name="time_entries_updated_success">Time entries updated successfully</string>
+    <string name="unknown_date">Unknown date</string>
+    <string name="expand_entries">Show all</string>
+    <string name="collapse_entries">Hide</string>
+    <string name="use_specific_times">Set default times</string>
+
+    <!-- Admin Dashboard Strings -->
+    <string name="search_courses">Search courses</string>
+    <string name="search_timeslots">Search timeslots</string>
+    <string name="select_date_range">Select date range</string>
+    <string name="delete_selected">Delete selected</string>
+    <string name="total_timeslots">Total Timeslots</string>
+    <string name="active_timeslots">Active Timeslots</string>
+    <string name="booked_capacity">Booked Capacity</string>
+    <string name="filter_by_date">Filter by date</string>
+    <string name="apply_filters">Apply Filters</string>
+    <string name="bulk_delete_confirmation">Delete selected timeslots?</string>
+    <string name="bulk_delete_confirmation_message">Are you sure you want to delete %1$d selected timeslots?</string>
+    <string name="date_range_from">From</string>
+    <string name="date_range_to">To</string>
+    <string name="select_all">Select All</string>
+    <string name="unselect_all">Unselect All</string>
+    <string name="error_end_time">End time must be after start time</string>
+    <string name="error_date_range">Date must be within the valid range</string>
+
+    <!-- TimeEntryDialog Strings -->
+    <string name="error_timeslot_required">Timeslot required</string>
+    <string name="valid_date">Valid date: %1$s</string>
+    <string name="valid_range">Valid range: %1$s - %2$s</string>
+    <string name="default_times_from_timeslot">Default times from timeslot: %1$s - %2$s</string>
+    <string name="error_invalid_date_format">Invalid date format</string>
+    <string name="error_end_time_after_start_time">End time must be after start time</string>
+
+    <!-- Guest Courselist-->
+    <string name="course_list_title">Course List</string>
+
+    <!-- Accessibility -->
+    <string name="content_desc_time_icon">Time icon</string>
+    <string name="content_desc_location_icon">Location icon</string>
+    <string name="time_range_format_accessibility">Time from %1$s to %2$s</string>
+    <string name="date_format_accessibility">Date: %1$s</string>
+    <string name="location_details_format">%1$s at %2$s, %3$s</string>
+    <string name="location_name_format">Location name: %1$s</string>
+    <string name="location_address_format">Address: %1$s</string>
+    <string name="location_city_format">%1$s %2$s, %3$s</string>
+    <!-- Accessibility Booking -->
+    <string name="booking_details_format">Booking %1$s: %2$s, Status: %3$s, Amount: %4$s</string>
+    <string name="booking_id_format">Booking ID: %1$s</string>
+    <string name="booking_course_format">Course: %1$s</string>
+    <string name="booking_amount_format">Amount: €%1$.2f</string>
+    <string name="booking_comment_format">Comment: %1$s</string>
+    <string name="content_desc_booking_status">Booking status: %1$s</string>
+    <!-- Course Item Accessibility -->
+    <string name="course_details_format">Course %1$s, Type: %2$s, Status: %3$s, Price: %4$s</string>
+    <string name="course_title_format">Course name: %1$s</string>
+    <string name="course_price_desc">Price per participant: €%1$.2f</string>
+    <string name="course_type_desc">Course type: %1$s</string>
+    <string name="course_status_desc">Course status: %1$s</string>
+    <string name="course_age_group_desc">Age group: %1$s</string>
+    <string name="course_participants_desc">%1$d of %2$d participants</string>
+    <!-- User Item Accessibility -->
+    <string name="user_details_format">User: %1$s %2$s, Role: %3$s</string>
+    <string name="content_desc_user_avatar">User profile image</string>
+    <string name="user_name_format">%1$s %2$s</string>
+    <string name="user_role_desc">User role: %1$s</string>
+    <string name="user_email_desc">Email: %1$s</string>
+    <!-- Invoice Item Accessibility -->
+    <string name="invoice_details_format">Invoice %1$s, Amount: %2$s, Status: %3$s</string>
+    <string name="invoice_number_desc">Invoice number: %1$s</string>
+    <string name="invoice_expiry_desc">Download expires on: %1$s</string>
+    <string name="content_desc_extend_token">Extend download period</string>
+    <string name="content_desc_view_invoice">View invoice</string>
+    <string name="content_desc_download_invoice">Download invoice</string>
+    <string name="actionbar_content_description">Actionbar</string>
+    <string name="courses_recycler_view_description">Course List</string>
+    <!-- Content Descriptions for Input Fields -->
+    <string name="hint_course_title_input_description">Input field for course title</string>
+    <string name="hint_course_description_input_description">Input field for course description</string>
+    <string name="hint_course_price_input_description">Input field for price per participant</string>
+    <!-- Content Descriptions for Dropdowns -->
+    <string name="hint_course_type_dropdown_description">Course types</string>
+    <string name="hint_course_age_group_dropdown_description">Age groups</string>
+    <!-- Content Description for ChipGroup -->
+    <string name="locations_chip_group_description">Chip group for locations</string>
+    <!-- Content Description for Manage Locations Button -->
+    <string name="manage_locations_button_description">Manage locations</string>
+    <string name="vertical_navigation_description">Vertical Navigation</string>
+    <string name="welcome_image_description">Welcome illustration</string>
+    <string name="login_image_description">Login illustration</string>
+
+
+    <!-- Hints für Location Edit Dialog -->
+    <string name="hint_location_name">Location name</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_postcode">Postcode</string>
+    <string name="hint_city">City</string>
+    <string name="hint_country">Country</string>
+
+    <!-- Hints für User Edit Dialog -->
+    <string name="hint_firstname">First name</string>
+    <string name="hint_lastname">Last name</string>
+    <string name="hint_role">Role</string>
+    <string name="timeslots_recycler_view_description">Timeslot List</string>
+    <string name="users_recycler_view_description">Users List</string>
+    <string name="create_entry_description">Create Entry</string>
+
+    <!-- Trainer Selection -->
+    <string name="select_trainers">Select trainers</string>
+    <string name="error_loading_trainers">Error loading trainers</string>
+    <string name="error_adding_trainer">Error adding trainer</string>
+    <string name="error_removing_trainer">Error removing trainer</string>
+
+    <!-- Trainer Management -->
+    <string name="manage_trainers">Manage trainers</string>
+    <string name="manage_trainers_with_count">Manage trainers [%1$d]</string>
+    <string name="error_no_time_entry">No time entries found</string>
+    <string name="error_loading_time_entry">Error loading time entries</string>
+
+    <!-- Guest Dashboard -->
+    <string name="guest_dashboard_help">Help</string>
+    <string name="guest_dashboard_booking">Book Course</string>
+    <string name="guest_dashboard_welcome">Start</string>
+
+    <!-- Guest Bookings Overview -->
+    <string name="booking_title">Booking Details</string>
+    <string name="time_entry_details_format">Time: %1$s - %2$s on %3$s</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_email2">Email</string>
+    <string name="button_reserve">Reserve</string>
+    <string name="error_empty_fields">Please fill in all fields</string>
+    <string name="booking_successful">Booking successful!</string>
+
+    <!-- Guest Course List -->
+    <string name="guest_available_locations">Available Locations</string>
+    <string name="available_locations">Available Locations</string>
+    <string name="spots_available">%1$d/%2$d available</string>
+    <string name="no_spots_available">No spots available</string>
+    <string name="course_available">Available</string>
+    <string name="course_fully_booked">Fully Booked</string>
+    <string name="course_not_bookable">Not Bookable</string>
+    <string name="error_loading_timeslots">Error loading timeslots</string>
+    <string name="available_courses_description">Here you will find a list of our course offerings. Click on a course (or directly on the desired location) to view the available dates.</string>    <string name="course_fully_booked_message">Unfortunately, this course is already fully booked. Please select another course or try again later.</string>
+    <string name="available_timeslots">Available Timeslots</string>
+    <string name="available_time_entries">Timespots:</string>
+    <string name="course_date_ranges_desc">Available Spots: %1$s</string>
+    <string name="book_course_preview">Book Course</string>
+    <string name="book_course">Make binding booking</string>
+
+    <!-- New strings for booking -->
+    <string name="button_reserve_desc">Reserve a spot (%d available)</string>
+    <string name="time_entry_date_format">%1$s (%2$s)</string>
+    <string name="time_entry_accessibility_format">Time: %1$s on %2$s</string>
+    <string name="timeslot_details_format">%1$s at %2$s, %3$s with %4$s</string>
+    <string name="no_time_entries_title">No Time Entries</string>
+    <string name="no_time_entries_message">There are no time entries available for this timeslot.</string>
+    <string name="select_time_title">Select Time</string>
+    <string name="book">Book</string>
+    <string name="billing_information">Billing Information:</string>
+    <string name="hint_phone">Phone Number</string>
+    <string name="error_name_required">Name is required</string>
+    <string name="error_phone_invalid">Invalid phone number</string>
+    <string name="error_address_required">Address is required</string>
+
+    <!-- Help Screen -->
+    <string name="help_title">Help &amp; Support</string>
+    <string name="help_quick_start">Quick Start</string>
+    <string name="help_quick_start_desc">Welcome to the course booking app! Here you can find available courses, view schedules, and make bookings. Use the navigation below to switch between different sections.</string>
+    <string name="help_booking_process">Booking Process</string>
+    <string name="help_booking_process_desc">1. Select a course from the list\n2. Check the available locations\n3. Choose a suitable date\n4. Enter your contact information\n5. Confirm your booking\n\nAfter successful booking, you will receive a confirmation.</string>
+    <string name="help_faq">Frequently Asked Questions</string>
+    <string name="help_faq_desc">• How can I cancel a course?\nPlease contact us directly via the email address provided below.\n\n• Can I change the schedule?\nYes, just contact us before the course starts.\n\n• How is payment processed?\nYou will receive an invoice via email after booking.</string>
+    <string name="help_contact">Contact</string>
+    <string name="help_contact_desc">For further questions, you can reach us at:\n\nEmail: support@coursebooking.com\nPhone: +43 664 2203022\n\nOur service hours:\nMon-Fri: 9:00 AM - 5:00 PM</string>
+
+
+    <!-- Buchungsform -->
+    <string name="participants">Participants</string>
+    <string name="add_participant">Add Participant</string>
+    <string name="edit_participant">Edit Participant</string>
+    <string name="birthdate">Date of birth</string>
+    <string name="skill_level">Skill Level</string>
+    <string name="select_birthdate">Select date of birth</string>
+    <string name="error_no_participants">Please add at least one participant</string>
+    <string name="error_name_too_short">Name must be at least 2 characters long</string>
+    <string name="error_birthdate_required">Date of birth is required</string>
+    <string name="error_birthdate_invalid_format">Invalid date format (YYYY-MM-DD)</string>
+    <string name="error_skill_level_required">Skill level is required</string>
+    <string name="error_skill_level_invalid">Invalid skill level</string>
+    <string name="error_phone_required">Phone number is required</string>
+    <string name="error_phone_too_short">Phone number must be at least 8 characters long</string>
+    <string name="error_phone_invalid_format">Invalid phone number format</string>
+    <string name="error_city_required">City is required</string>
+    <string name="error_city_too_short">City must be at least 2 characters long</string>
+    <string name="error_zip_required">ZIP code is required</string>
+    <string name="error_zip_invalid">Invalid ZIP code format</string>
+    <string name="error_address_too_short">Address must be at least 5 characters long</string>
+    <string name="error_country_required">Country is required</string>
+    <string name="error_country_too_short">Country must be at least 2 characters long</string>
+    <string name="error_booking_failed">Booking failed</string>
+    <string name="add_billing_as_participant">Add as Participant</string>
+    <string name="skill_level_beginner">Beginner</string>
+    <string name="skill_level_intermediate">Intermediate</string>
+    <string name="skill_level_advanced">Advanced</string>
+    <string name="participant_description">
+        <![CDATA[
+        %1$s %2$s,
+        Email: %3$s,
+        Birthdate: %4$s,
+        Skill Level: %5$s
+        ]]>
+    </string>
+
+    <!-- Booking Success -->
+    <string name="booking_success_title">Booking Successful!</string>
+    <string name="booking_success_message">Your booking has been received and will be processed shortly by a team member.</string>
+    <string name="book_another_course">Book Another Course</string>
+    <string name="back_to_start">Back to Start</string>
+    <string name="content_desc_booking_success">Booking successful icon</string>
+    <string name="login_trainer_text">This login is exclusively for trainers and administrators.\n\nIf you have not yet received your login credentials, please contact our administration at trainerservice@bikinibottom.com</string>
+    <string name="login_title">Login as Trainer</string>
+    <string name="trainerdashboard_title">Trainer Dashboard</string>
+    <string name="admindashboard_title">Admin Dashboard</string>
+</resources>

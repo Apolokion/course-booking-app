@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/language_de"
+        android:title="@string/language_german"
+        android:icon="@drawable/ic_flag_de"/>
+
+    <item
+        android:id="@+id/language_en"
+        android:title="@string/language_english"
+        android:icon="@drawable/ic_flag_en"/>
+
+</menu>

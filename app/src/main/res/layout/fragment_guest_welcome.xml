@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/GuestWelcomeFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/screen_padding">
+
+    <!-- Welcome Image bleibt gleich -->
+    <ImageView
+        android:id="@+id/welcome_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/content_spacing_large"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/welcome_image_description"
+        android:scaleType="fitCenter"
+        android:src="@drawable/image_welcome"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <!-- Welcome Text mit verbessertem Kontrast -->
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_spacing_large"
+        android:gravity="center"
+        android:text="@string/welcome_text"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceHeadlineMedium"
+        android:textColor="?attr/colorOnBackground"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_image"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- Button Container -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/content_spacing_large"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.8">
+
+        <!-- Guest Button - Primärer Style -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/welcome_guest_button"
+            style="@style/Widget.App.Button.Welcome"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginBottom="@dimen/content_spacing"
+            android:elevation="4dp"
+            android:maxWidth="@dimen/button_max_width"
+            android:text="@string/continue_as_guest" />
+
+        <!-- Login Button - Sekundärer Style -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/welcome_login_button"
+            style="@style/Widget.App.Button.Welcome.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:elevation="4dp"
+            android:maxWidth="@dimen/button_max_width"
+            android:text="@string/button_login" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

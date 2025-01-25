@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/guestDashboardFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="biz.pock.coursebookingapp.ui.fragments.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_adminDashboardFragment"
+            app:destination="@id/adminDashboardFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loginFragment_to_trainerDashboardFragment"
+            app:destination="@id/trainerDashboardFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_guestDashboardFragment"
+            app:destination="@id/guestDashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guestWelcomeFragment"
+        android:name="biz.pock.coursebookingapp.ui.fragments.GuestWelcomeFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_guest_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_helpFragment2"
+            app:destination="@id/helpFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_guestCourseListFragment"
+            app:destination="@id/guestCourseListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guestCourseListFragment"
+        android:name="biz.pock.coursebookingapp.ui.fragments.GuestCourseListFragment"
+        android:label="GuestCourseListFragment"
+        tools:layout="@layout/fragment_guest_course_list" />
+
+
+    <fragment
+        android:id="@+id/adminDashboardFragment"
+        android:name="biz.pock.coursebookingapp.ui.fragments.dashboard.AdminDashboardFragment"
+        android:label="Admin Dashboard"
+        tools:layout="@layout/fragment_admin_dashboard">
+
+        <action
+            android:id="@+id/action_adminDashboardFragment_to_invoiceViewerFragment"
+            app:destination="@id/invoiceViewerFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/trainerDashboardFragment"
+        android:name="biz.pock.coursebookingapp.ui.fragments.dashboard.TrainerDashboardFragment"
+        android:label="TrainerDashboardFragment"
+        tools:layout="@layout/fragment_trainer_dashboard" />
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="biz.pock.coursebookingapp.ui.fragments.GuestHelpFragment"
+        android:label="fragment_help"
+        tools:layout="@layout/fragment_guest_help" />
+    <fragment
+        android:id="@+id/invoiceViewerFragment"
+        android:name="biz.pock.coursebookingapp.ui.fragments.InvoiceViewerFragment"
+        android:label="Invoice"
+        tools:layout="@layout/fragment_invoice_viewer">
+        <argument
+            android:name="invoiceId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guestDashboardFragment"
+        android:name="biz.pock.coursebookingapp.ui.fragments.GuestDashboardFragment"
+        android:label="GuestDashboardFragment"
+        tools:layout="@layout/fragment_guest_dashboard">
+        <action
+            android:id="@+id/action_guestDashboardFragment_to_guestTimeslotListFragment"
+            app:destination="@id/guestTimeslotListFragment" />
+        <action
+            android:id="@+id/action_guestDashboardFragment_to_guestBookingsFillOutFormFragment"
+            app:destination="@id/guestBookingsFillOutFormFragment"/>
+        <argument
+            android:name="tabId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guestTimeslotListFragment"
+        android:name="biz.pock.coursebookingapp.ui.fragments.GuestTimeslotListFragment"
+        android:label="GuestTimeslotListFragment"
+        tools:layout="@layout/fragment_guest_timeslot_list">
+        <action
+            android:id="@+id/action_guestTimeslotListFragment_to_guestBookingsFillOutFormFragment"
+            app:destination="@id/guestBookingsFillOutFormFragment"
+            app:popUpTo="@id/guestTimeslotListFragment" />
+        <argument
+            android:name="course"
+            app:argType="biz.pock.coursebookingapp.data.model.Course" />
+        <argument
+            android:name="preSelectedLocationId"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_guestTimeslotListFragment_to_guestDashboardFragment"
+            app:destination="@id/guestDashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guestBookingsFillOutFormFragment"
+        android:name="biz.pock.coursebookingapp.ui.fragments.GuestBookingsFillOutFormFragment"
+        android:label="Booking Form"
+        tools:layout="@layout/fragment_guest_bookings_fill_out_form">
+        <action
+            android:id="@+id/action_guestBookingsFillOutFormFragment_to_guestBookingsOverviewFragment"
+            app:destination="@id/guestBookingsOverviewFragment"
+            app:popUpTo="@id/guestDashboardFragment" />
+
+        <argument
+            android:name="timeslot"
+            app:argType="biz.pock.coursebookingapp.data.model.Timeslot" />
+        <argument
+            android:name="course"
+            app:argType="biz.pock.coursebookingapp.data.model.Course" />
+        <action
+            android:id="@+id/action_guestBookingsFillOutFormFragment_to_guestBookingSuccessFragment"
+            app:destination="@id/guestBookingSuccessFragment" />
+        <action
+            android:id="@+id/action_guestBookingsFillOutFormFragment_pop"
+            app:popUpTo="@id/guestTimeslotListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/guestBookingsOverviewFragment"
+        android:name="biz.pock.coursebookingapp.ui.fragments.GuestBookingsOverviewFragment"
+        android:label="GuestBookingsOverviewFragment"
+        tools:layout="@layout/fragment_guest_bookings_overview">
+
+    </fragment>
+    <fragment
+        android:id="@+id/guestBookingSuccessFragment"
+        android:name="biz.pock.coursebookingapp.ui.fragments.GuestBookingSuccessFragment"
+        android:label="GuestBookingSuccessFragment"
+        tools:layout="@layout/fragment_guest_booking_success">
+        <action
+            android:id="@+id/action_guestBookingSuccessFragment_to_guestDashboardFragment"
+            app:destination="@id/guestDashboardFragment" />
+        <argument
+            android:name="bookingDetails"
+            app:argType="biz.pock.coursebookingapp.data.model.GuestBookingDetails" />
+
+    </fragment>
+
+</navigation>

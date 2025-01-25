@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding"
+        android:gravity="center_horizontal">
+
+        <!-- Container mit minWidth und maxWidth -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/input_field_min_width"
+            android:maxWidth="@dimen/input_field_max_width"
+            android:orientation="vertical">
+
+            <!-- Title Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputTitle"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_course_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/hint_course_title"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Description Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputDescription"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:hint="@string/hint_course_description">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:minLines="3"
+                    android:padding="@dimen/input_field_padding"
+                    android:hint="@string/hint_course_description"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Price Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPrice"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:hint="@string/hint_course_price">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:hint="@string/hint_course_price"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Type Dropdown -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputType"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:hint="@string/hint_course_type">
+
+                <AutoCompleteTextView
+                    android:id="@+id/dropdownType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:hint="@string/hint_course_type"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Age Group Dropdown -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputAgeGroup"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:hint="@string/hint_course_age_group"
+                android:contentDescription="@string/hint_course_age_group_dropdown_description">
+
+                <AutoCompleteTextView
+                    android:id="@+id/dropdownAgeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:hint="@string/hint_course_age_group_dropdown_description"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Locations Section -->
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupLocations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:contentDescription="@string/hint_course_age_group_dropdown_description"/>
+
+            <!-- Manage Locations Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonManageLocations"
+                style="@style/Widget.App.Button.Manage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/content_spacing_small"
+                android:text="@string/manage_locations"
+                android:contentDescription="@string/manage_locations_button_description"
+                app:icon="@drawable/ic_location"
+                android:importantForAccessibility="yes"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

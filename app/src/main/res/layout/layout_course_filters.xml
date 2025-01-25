@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    app:cardElevation="@dimen/card_elevation"
+    app:cardCornerRadius="@dimen/card_corner_radius">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding_small">
+
+        <!-- Horizontale ScrollView für Filter Buttons -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:padding="@dimen/content_spacing_extra_small">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/content_spacing_extra_small">
+
+                <!-- Type Filter -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonFilterType"
+                    style="@style/Widget.App.Button.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginEnd="@dimen/content_spacing"
+                    android:text="@string/filter_type_all"
+                    android:minHeight="@dimen/button_min_height"
+                    app:icon="@drawable/ic_filter"
+                    app:iconGravity="end"
+                    android:importantForAccessibility="yes"
+                    android:contentDescription="@string/filter_type_all"/>
+
+                <!-- Status Filter -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonFilterStatus"
+                    style="@style/Widget.App.Button.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginEnd="@dimen/content_spacing"
+                    android:text="@string/filter_status_all"
+                    android:minHeight="@dimen/button_min_height"
+                    app:icon="@drawable/ic_filter"
+                    app:iconGravity="end"
+                    android:importantForAccessibility="yes"
+                    android:contentDescription="@string/filter_status_all"/>
+
+                <!-- Age Group Filter -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonFilterAgeGroup"
+                    style="@style/Widget.App.Button.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:text="@string/filter_age_group_all"
+                    android:minHeight="@dimen/button_min_height"
+                    app:icon="@drawable/ic_filter"
+                    app:iconGravity="end"
+                    android:importantForAccessibility="yes"
+                    android:contentDescription="@string/filter_age_group_all"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!-- Clear Filters Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonResetFilters"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/content_spacing_extra_small"
+            android:paddingHorizontal="@dimen/button_padding_horizontal"
+            android:paddingVertical="@dimen/button_padding_vertical"
+            android:text="@string/filter_clear"
+            android:visibility="gone"
+            android:importantForAccessibility="yes"
+            android:contentDescription="@string/filter_clear"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

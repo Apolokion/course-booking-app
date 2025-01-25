@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainFragment"
+        android:icon="@drawable/ic_course_booking"
+        android:title="@string/menu_main_fragment" />
+
+    <item
+        android:id="@+id/helpFragment"
+        android:icon="@drawable/ic_help"
+        android:title="@string/menu_help" />
+
+    <item
+        android:id="@+id/loginFragment"
+        android:icon="@drawable/ic_login"
+        android:title="@string/menu_login" />
+
+</menu>

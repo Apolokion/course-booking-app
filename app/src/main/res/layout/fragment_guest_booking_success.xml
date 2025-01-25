@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <!-- Success Icon & Message -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_spacing_large"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/success_image_size"
+                android:layout_height="@dimen/success_image_size"
+                android:contentDescription="@string/content_desc_booking_success"
+                android:src="@drawable/ic_success"
+                app:tint="@color/success_color" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing_large"
+                android:gravity="center"
+                android:text="@string/booking_success_title"
+                android:textAppearance="?attr/textAppearanceHeadlineMedium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_spacing"
+                android:gravity="center"
+                android:text="@string/booking_success_message"
+                android:textAppearance="?attr/textAppearanceBody1" />
+        </LinearLayout>
+
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_spacing_large"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonBookAnother"
+                style="@style/Widget.App.Button.Welcome"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/content_spacing"
+                android:maxWidth="@dimen/welcome_button_max_width"
+                android:text="@string/book_another_course" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonBackToStart"
+                style="@style/Widget.App.Button.Welcome.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/content_spacing"
+                android:maxWidth="@dimen/welcome_button_max_width"
+                android:text="@string/back_to_start" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

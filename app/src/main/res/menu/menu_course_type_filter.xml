@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/filter_type_all"
+        android:title="@string/filter_type_all"/>
+    <item
+        android:id="@+id/filter_type_public"
+        android:title="@string/filter_type_public"/>
+    <item
+        android:id="@+id/filter_type_private"
+        android:title="@string/filter_type_private"/>
+</menu>

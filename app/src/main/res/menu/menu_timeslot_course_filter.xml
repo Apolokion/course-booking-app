@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/filter_course_all"
+        android:title="@string/hint_select_course"/>
+        <!-- Kurse werden im Code hinzugefügt -->
+</menu>

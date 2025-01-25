@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PdfRendererView">
+        <attr name="enable_swipe" format="boolean" />
+        <attr name="show_page_numbers" format="boolean" />
+        <attr name="show_top_bar" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FilterButton">
+        <attr name="filterBackgroundTint" format="color" />
+        <attr name="filterTextColor" format="color" />
+        <attr name="filterIconTint" format="color" />
+    </declare-styleable>
+</resources>
